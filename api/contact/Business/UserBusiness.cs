@@ -12,7 +12,7 @@ namespace contact.Business
 {
     public class UserBusiness
     {
-        public BusinessResult<int> Register(UserAddModel model)
+        public BusinessResult<int> RegisterBusiness(UserAddModel model)
         {
             BusinessResult<int> result = new();
 
@@ -81,11 +81,11 @@ namespace contact.Business
             };
         }
 
-        public BusinessResult<UserProfileModel> Profile(int userId) 
+        public BusinessResult<UserProfileModel> ProfileBusiness(int userId) 
         {
             UserTable table = new UserData().GetUserInfoById(userId);
 
-            string file = @$".\Avatar\{table.Username.ToLower()}.png";
+            string file = @$"E:\full stack\contact project\contacts\api\contact\bin\Debug\net9.0\Avatar\{table.Username.ToLower()}.png";
 
             string data = Convert.ToBase64String(File.ReadAllBytes(file));
             return new BusinessResult<UserProfileModel>()
