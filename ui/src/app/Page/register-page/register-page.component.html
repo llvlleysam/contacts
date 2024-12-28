@@ -1,0 +1,14 @@
+<div [formGroup]="registerForm" (ngSubmit)="register()" class="w-full h-screen bg-blue-500 flex justify-center items-center">
+    <form class="p-10 flex flex-col gap-4 justify-center items-center border-2 rounded-2xl bg-white/30 drop-shadow-xl">
+        <span>Fullname :</span>
+        <input type="text" class="drop-shadow-lg w-full border-black rounded-lg py-1 pl-2" formControlName="fullname">
+        <span>Username :</span>
+        <input type="text" class="drop-shadow-lg w-full border-black rounded-lg py-1 pl-2" formControlName="username">
+        <span>Password :</span>
+        <input type="password" class="drop-shadow-lg w-full border-black rounded-lg py-1 pl-2" formControlName="password">
+        <span>Profile Image :</span>
+        <input type="file" formControlName="imageData" (change)="show($event)">
+        @if (url) {<img [src]="url" alt="Preview" class="max-w-32 border rounded-xl drop-shadow-xl">}
+        <input type="submit" value="Register" class=" w-full border-black rounded-lg bg-red-500 hover:bg-red-800 transition-all delay-75 cursor-pointer text-white py-1">
+    </form>
+</div>

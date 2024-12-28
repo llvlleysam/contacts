@@ -8,8 +8,6 @@ namespace contact.Model.Table.User
 
         public string Password { get; set; }
 
-        public string PasswordConfirm { get; set; }
-
         public string FullName { get; set; }
 
         public string ImageData { get; set; }

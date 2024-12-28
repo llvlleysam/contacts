@@ -1,0 +1,9 @@
+<div class="w-full h-screen bg-blue-500 flex justify-center items-center">
+    <form [formGroup]="loginform" (ngSubmit)="login()" class="p-10 flex flex-col gap-4 justify-center items-center border-2 rounded-2xl bg-white drop-shadow-xl">
+        <label>Login</label>
+        <input type="text" formControlName="username" class="drop-shadow-lg w-full border-black rounded-lg py-1 pl-2 placeholder:text-sm" placeholder="Username...">
+        <input type="password" formControlName="password" class="drop-shadow-lg w-full border-black rounded-lg py-1 pl-2 placeholder:text-sm" placeholder="Password...">
+        <input type="submit" value="Login" class=" w-full border-black rounded-lg bg-green-500 hover:bg-green-800 transition-all delay-75 cursor-pointer text-white py-1">
+        <span class="text-sm">Go to <a [routerLink]="['/register']" class="text-blue-800 hover:text-blue-500 transition-all delay-75 cursor-pointer">Register Form</a></span>
+    </form>
+</div>

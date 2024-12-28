@@ -1,0 +1,9 @@
+<div *ngIf="!isLoading" class="profile-container">
+    <h1>Username :{{ username }}</h1>
+    <h2>Fullname {{ fullname }}</h2>
+    <span>Avatar</span>
+    <img [src]="avatar" alt="Avatar">
+</div>
+<div *ngIf="isLoading" class="loading">
+    <p>Loading...</p>
+</div>

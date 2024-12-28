@@ -14,6 +14,13 @@ namespace contact
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
+            // code fore request for angular
+            app.UseCors(x =>
+            {
+                x.AllowAnyHeader();
+                x.AllowAnyMethod();
+                x.AllowAnyOrigin();
+            });
 
             app.UseAuthorization();
 
